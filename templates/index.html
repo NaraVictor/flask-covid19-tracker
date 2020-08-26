@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Covid-19 Tracker</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/bootstrap.css') }}"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static',filename='css/styles.css')}}"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<section class="row mt-3">
+				<article class="col-12">
+					<img
+						src="{{ url_for('static', filename='img/rec.png')}}"
+						alt="Rectangle"
+						id="logo"
+					/>
+					<h1 class="d-inline">Nara's Covid-19 Tracker</h1>
+				</article>
+			</section>
+			<section class="row mb-3">
+				<div class="col-12">
+					<h5 id="country" class="d-inline mr-3">loading...</h5>
+					&verbar;
+					<select name="countries" id="countries" class="shadow-sm ml-3">
+						<option value="">loading countries</option>
+					</select>
+				</div>
+			</section>
+
+			<section class="row">
+				<div class="col-md-3">
+					<div class="info-card mb-3 shadow p-3 bg-info text-white">
+						<span>
+							Total Cases
+							<!-- <span class="triangle-up"></span> -->
+						</span>
+						<p id="total" class="numbers">loading...</p>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="info-card mb-3 shadow p-3 bg-success text-white">
+						<span>
+							Recovered
+							<!-- <span class="triangle-up"></span> -->
+						</span>
+						<p id="recovered" class="numbers">loading...</p>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="info-card mb-3 shadow p-3 bg-danger text-white">
+						<span>
+							Active Cases
+							<!-- <span class="triangle-up"></span> -->
+						</span>
+						<p id="active" class="numbers">loading...</p>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="info-card shadow p-3 bg-dark text-white">
+						<span>
+							Deaths
+							<!-- <span class="triangle-up"></span> -->
+						</span>
+						<p id="deaths" class="numbers">loading...</p>
+					</div>
+				</div>
+			</section>
+			<div class="row">
+				<div class="col-12 mt-3">
+					<p>Global Stats <span id="global-count"></span></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Country</th>
+								<th>Recovered</th>
+								<th>Confirmed</th>
+								<th>Active</th>
+								<th>Deaths</th>
+							</tr>
+						</thead>
+						<tbody id="covid-table"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script src="{{url_for('static', filename='js/index.js')}}"></script>
+	</body>
+</html>

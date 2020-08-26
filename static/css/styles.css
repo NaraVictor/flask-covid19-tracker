@@ -1,0 +1,32 @@
+body {
+	background-color: #e4f8f8;
+}
+
+.info-card {
+	border-radius: 10px;
+	padding-left: 30%;
+}
+
+.triangle-up {
+	width: 0;
+	height: 1px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 15px solid red;
+}
+
+.numbers {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#logo {
+	height: 100px;
+}
+
+#countries {
+	padding: 3px;
+	border-radius: 5px;
+	border: 0px;
+	width: 200px;
+}
